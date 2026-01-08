@@ -16,7 +16,7 @@ const Index = () => {
     <main className="relative min-h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
+        className="absolute inset-0 bg-cover bg-no-repeat md:hidden"
         style={{ 
           backgroundImage: `url(${mobileBackground})`,
           imageRendering: 'high-quality',
@@ -24,6 +24,7 @@ const Index = () => {
           backfaceVisibility: 'hidden',
           transform: 'translate3d(0, 0, 0)',
           willChange: 'transform',
+          backgroundPosition: 'center 35%',
         }}
       />
       
@@ -98,7 +99,7 @@ const Index = () => {
         <div className="flex flex-1 items-start px-5 pt-0 pb-1 md:px-24 md:pt-16 md:pb-6 md:items-center">
           <div className="w-full max-w-md md:max-w-4xl">
             {/* Content */}
-            <div className="space-y-2 md:space-y-8">
+            <div className="space-y-1 md:space-y-8">
               {/* Decorative top line */}
               <div 
                 className="opacity-0 animate-fade-in"
@@ -139,22 +140,14 @@ const Index = () => {
                 <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#E6B324]/40 to-transparent md:h-[2px]"></div>
               </div>
 
+              {/* Info badges em linha */}
               <div 
-                className="flex items-center justify-between gap-1.5 opacity-0 animate-fade-in md:gap-5 md:flex-wrap md:justify-start"
+                className="opacity-0 animate-fade-in"
                 style={{ animationDelay: "0.7s" }}
               >
-                <InfoChip
-                  icon={<Calendar className="h-3.5 w-3.5" aria-hidden="true" />}
-                  text="14 JAN 2026"
-                />
-                <InfoChip
-                  icon={<Clock className="h-3.5 w-3.5" aria-hidden="true" />}
-                  text="19H"
-                />
-                <InfoChip
-                  icon={<Users className="h-3.5 w-3.5" aria-hidden="true" />}
-                  text="GRATUITA"
-                />
+                <p className="text-[13px] text-white/95 font-semibold text-center md:text-[16px]" style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.8)' }}>
+                  14 de Jan 2026 <span className="text-[#E6B324] mx-1">|</span> 19h Ao Vivo <span className="text-[#E6B324] mx-1">|</span> Gratuito
+                </p>
               </div>
             </div>
           </div>
