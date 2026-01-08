@@ -32,34 +32,38 @@ const Index = () => {
   return (
     <main>
       <section
-        className="relative min-h-screen w-full overflow-hidden"
-        style={{ backgroundColor: "hsl(var(--background))" }}
+        className="relative min-h-screen w-full overflow-hidden bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${carolinaBg})` }}
       >
-        {/* Background com sombra/overlay escuro */}
-        <div
-          className="pointer-events-none absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-          style={{ backgroundImage: `url(${carolinaBg})` }}
-        />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_520px_at_18%_22%,hsl(var(--primary)/0.12),transparent_60%)]" />
+        {/* Overlays para contraste e legibilidade (IHC) */}
+        <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-background/95 via-background/80 to-background/15" />
+        <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(1200px_520px_at_18%_22%,hsl(var(--primary)/0.18),transparent_60%)]" />
 
-        {/* Foto da Carolina na frente (lado direito) */}
-        <div className="pointer-events-none absolute bottom-0 right-0 hidden h-full w-1/2 items-end justify-end lg:flex">
+        {/* Foto em PNG por cima do background (sem criar segunda dobra) */}
+        <div className="pointer-events-none absolute bottom-0 right-0 z-20 hidden h-full w-1/2 items-end justify-end lg:flex">
           <img
             src={carolinaPhoto}
-            alt="Carolina Bezerra"
-            className="h-auto max-h-[95%] w-auto object-contain drop-shadow-[0_8px_40px_rgba(0,0,0,0.5)]"
+            alt="Foto da advogada Carolina Bezerra"
+            className="h-auto max-h-[92vh] w-auto object-contain drop-shadow-[0_18px_60px_hsl(var(--foreground)/0.28)]"
+            loading="eager"
           />
         </div>
-
-        <div className="relative mx-auto flex min-h-screen max-w-6xl items-center px-6 py-14 md:px-12">
+        <div className="pointer-events-none absolute bottom-0 right-[-40px] z-20 lg:hidden">
+          <img
+            src={carolinaPhoto}
+            alt="Foto da advogada Carolina Bezerra"
+            className="h-auto max-h-[46vh] w-auto object-contain opacity-40 drop-shadow-[0_18px_60px_hsl(var(--foreground)/0.22)]"
+            loading="lazy"
+          />
+        </div>
+        <div className="relative z-20 mx-auto flex min-h-screen max-w-6xl items-center px-6 py-14 md:px-12">
           <div className="w-full max-w-2xl">
             {/* Logo */}
             <div className="mb-8">
               <img
                 src={carolinaLogo}
                 alt="Carolina Bezerra Advocacia"
-                className="h-16 w-auto md:h-20"
+                className="h-20 w-auto max-w-[420px] md:h-24 lg:h-28"
               />
             </div>
 
@@ -113,7 +117,7 @@ const Index = () => {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-3 rounded-lg bg-accent px-6 py-4 text-sm font-semibold uppercase tracking-wide text-accent-foreground shadow-lg shadow-black/30 transition hover:brightness-110 md:w-auto"
+                className="inline-flex w-full items-center justify-center gap-3 rounded-lg bg-accent px-6 py-4 text-sm font-semibold uppercase tracking-wide text-accent-foreground shadow-[0_18px_50px_hsl(var(--foreground)/0.22)] transition hover:brightness-110 md:w-auto"
                 aria-label="Entrar no grupo do WhatsApp para receber o link da palestra"
               >
                 <MessageCircle className="h-5 w-5" aria-hidden="true" />
@@ -135,15 +139,6 @@ const Index = () => {
               </p>
             </footer>
           </div>
-        </div>
-
-        {/* Foto da Carolina no mobile (abaixo do conteúdo) */}
-        <div className="relative flex justify-center lg:hidden">
-          <img
-            src={carolinaPhoto}
-            alt="Carolina Bezerra"
-            className="h-auto max-h-[400px] w-auto object-contain drop-shadow-[0_8px_40px_rgba(0,0,0,0.5)]"
-          />
         </div>
       </section>
     </main>
