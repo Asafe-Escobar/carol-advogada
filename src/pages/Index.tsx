@@ -142,11 +142,16 @@ const Index = () => {
 
               {/* Info badges em linha */}
               <div 
-                className="opacity-0 animate-fade-in"
+                className="opacity-0 animate-fade-in mt-4 mb-2 md:mb-8"
                 style={{ animationDelay: "0.7s" }}
               >
-                <p className="text-[13px] text-white/95 font-semibold text-center md:text-[16px]" style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.8)' }}>
-                  14 de Jan 2026 <span className="text-[#E6B324] mx-1">|</span> 19h Ao Vivo <span className="text-[#E6B324] mx-1">|</span> Gratuito
+                <p className="text-[13px] text-white/95 font-semibold text-center md:text-[16px] flex items-center justify-center gap-1 flex-wrap" style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.8)' }}>
+                  14 de Jan 2026 <span className="text-[#E6B324] mx-1">|</span> 
+                  <span className="flex items-center gap-1.5">
+                    <span className="inline-block w-2 h-2 bg-red-600 rounded-full animate-pulse"></span>
+                    19h Ao Vivo
+                  </span>
+                  <span className="text-[#E6B324] mx-1">|</span> Gratuito
                 </p>
               </div>
             </div>
