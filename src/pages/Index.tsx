@@ -19,11 +19,11 @@ const Index = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
         style={{ 
           backgroundImage: `url(${mobileBackground})`,
-          imageRendering: 'crisp-edges',
-          filter: 'contrast(1.3) brightness(1.1) saturate(1.25) blur(0px)',
+          imageRendering: 'high-quality',
           WebkitBackfaceVisibility: 'hidden',
           backfaceVisibility: 'hidden',
-          transform: 'translateZ(0) scale(1.001)',
+          transform: 'translate3d(0, 0, 0)',
+          willChange: 'transform',
         }}
       />
       
