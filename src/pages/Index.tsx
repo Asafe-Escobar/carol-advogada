@@ -84,7 +84,7 @@ const Index = () => {
             <div className="inline-block">
               <img 
                 src={logo} 
-                alt="Carolina de Carvalho Bezerra - Advocacia" 
+                alt="Dr. Carolina - Advogada" 
                 className="h-24 w-auto drop-shadow-[0_10px_40px_rgba(0,0,0,0.6)] filter brightness-105 md:h-40"
               />
             </div>
@@ -192,7 +192,7 @@ const Index = () => {
             </div>
             
             <p className="text-[13px] text-[#E6B324] font-bold leading-[1.4] md:text-[18px]" style={{ textShadow: '0 3px 15px rgba(0, 0, 0, 0.9), 0 0 25px rgba(230, 179, 36, 0.4)' }}>
-              Carolina de Carvalho Bezerra • 10 anos de advocacia
+              Dr. Carolina - Advogada • 10 anos de experiência
             </p>
             <p className="mt-2 text-[11px] text-white/95 font-medium leading-[1.4] md:text-[16px] md:mt-3" style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.8)' }}>
               Professora, Palestrante e Conselheira Estadual da OAB/PI
