@@ -168,7 +168,7 @@ const Index = () => {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex w-full items-center justify-center gap-3 rounded-xl bg-gradient-to-b from-[#25D366] to-[#22C55E] px-5 py-4 text-[14px] font-extrabold uppercase tracking-wide text-white shadow-[0_10px_30px_rgba(37,211,102,0.5),inset_0_1px_0_rgba(255,255,255,0.25)] transition-all hover:from-[#22C55E] hover:to-[#20B559] hover:shadow-[0_14px_40px_rgba(37,211,102,0.6)] hover:scale-[1.03] active:scale-[0.98] duration-300 md:text-[18px] md:py-5 md:px-8 md:max-w-xl"
+              className="group relative inline-flex w-full items-center justify-center gap-2.5 rounded-lg bg-gradient-to-b from-[#25D366] to-[#22C55E] px-4 py-3.5 text-[14px] font-extrabold uppercase tracking-wide text-white shadow-[0_10px_30px_rgba(37,211,102,0.5),inset_0_1px_0_rgba(255,255,255,0.25)] transition-all hover:from-[#22C55E] hover:to-[#20B559] hover:shadow-[0_14px_40px_rgba(37,211,102,0.6)] hover:scale-[1.03] active:scale-[0.98] duration-300 md:text-[18px] md:py-4.5 md:px-7 md:max-w-xl"
               aria-label="Entrar no grupo do WhatsApp"
             >
               <svg className="h-6 w-6 group-hover:scale-110 transition-transform duration-300 md:h-7 md:w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
