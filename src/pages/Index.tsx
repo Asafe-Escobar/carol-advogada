@@ -115,7 +115,7 @@ const Index = () => {
                   textShadow: '0 6px 24px rgba(0, 0, 0, 0.9), 0 2px 12px rgba(230, 179, 36, 0.4)'
                 }}
               >
-                Informação correta para quem cuida de uma criança com <span className="text-[#E6B324] drop-shadow-[0_0_20px_rgba(230,179,36,0.8)]">TDAH</span> ou{" "}
+                Informação correta para quem cuida de uma criança ou adulto com <span className="text-[#E6B324] drop-shadow-[0_0_20px_rgba(230,179,36,0.8)]">TDAH</span> ou{" "}
                 <span className="text-[#E6B324] drop-shadow-[0_0_20px_rgba(230,179,36,0.8)]">Autismo</span>
               </h1>
 
