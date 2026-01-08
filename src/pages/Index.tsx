@@ -1,5 +1,5 @@
 import heroBackground from "@/assets/hero-background.jpg";
-import mobileBackground from "@/assets/mobile 1223.jpeg";
+import mobileBackground from "@/assets/mobile 1223.png";
 import logo from "@/assets/logo.png";
 import { Calendar, Clock, Users, Lock, Shield, MapPin, MessageCircle, ShieldCheck, Scale, BookOpen, FileText, ScrollText } from "lucide-react";
 
