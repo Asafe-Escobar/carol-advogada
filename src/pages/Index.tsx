@@ -9,6 +9,8 @@ import {
   Lock,
 } from "lucide-react";
 import carolinaBg from "@/assets/carolina-bg.jpg";
+import carolinaPhoto from "@/assets/carolina-photo.jpg";
+import carolinaLogo from "@/assets/carolina-logo.png";
 
 type InfoChipProps = {
   icon: ReactNode;
@@ -30,25 +32,44 @@ const Index = () => {
   return (
     <main>
       <section
-        className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${carolinaBg})` }}
+        className="relative min-h-screen w-full overflow-hidden"
+        style={{ backgroundColor: "hsl(var(--background))" }}
       >
-        {/* Overlays para contraste e legibilidade */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/20" />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_520px_at_18%_22%,hsl(var(--primary)/0.18),transparent_60%)]" />
+        {/* Background com sombra/overlay escuro */}
+        <div
+          className="pointer-events-none absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+          style={{ backgroundImage: `url(${carolinaBg})` }}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_520px_at_18%_22%,hsl(var(--primary)/0.12),transparent_60%)]" />
+
+        {/* Foto da Carolina na frente (lado direito) */}
+        <div className="pointer-events-none absolute bottom-0 right-0 hidden h-full w-1/2 items-end justify-end lg:flex">
+          <img
+            src={carolinaPhoto}
+            alt="Carolina Bezerra"
+            className="h-auto max-h-[95%] w-auto object-contain drop-shadow-[0_8px_40px_rgba(0,0,0,0.5)]"
+          />
+        </div>
 
         <div className="relative mx-auto flex min-h-screen max-w-6xl items-center px-6 py-14 md:px-12">
           <div className="w-full max-w-2xl">
-            <header className="mb-10">
+            {/* Logo */}
+            <div className="mb-8">
+              <img
+                src={carolinaLogo}
+                alt="Carolina Bezerra Advocacia"
+                className="h-16 w-auto md:h-20"
+              />
+            </div>
+
+            <header className="mb-8">
               <p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">
                 Palestra online e gratuita
               </p>
-              <p className="mt-3 text-sm text-muted-foreground">
-                Carolina Bezerra Advocacia • Especialista em BPC/LOAS
-              </p>
             </header>
 
-            <h1 className="font-display text-4xl leading-[1.05] text-foreground md:text-6xl">
+            <h1 className="font-display text-4xl leading-[1.05] text-foreground md:text-5xl lg:text-6xl">
               Para quem vive o <span className="text-primary">TDAH</span> ou o{" "}
               <span className="text-primary">autismo</span> dentro de casa
             </h1>
@@ -112,11 +133,17 @@ const Index = () => {
                 Escritórios físicos em Teresina, Acauã e Betânia do Piauí • WhatsApp:
                 <span className="font-medium text-foreground/90"> (86) 99806-0648</span>
               </p>
-              <p className="mt-2 text-xs text-muted-foreground">
-                Carolina Bezerra Advocacia — Nunca é só um benefício.
-              </p>
             </footer>
           </div>
+        </div>
+
+        {/* Foto da Carolina no mobile (abaixo do conteúdo) */}
+        <div className="relative flex justify-center lg:hidden">
+          <img
+            src={carolinaPhoto}
+            alt="Carolina Bezerra"
+            className="h-auto max-h-[400px] w-auto object-contain drop-shadow-[0_8px_40px_rgba(0,0,0,0.5)]"
+          />
         </div>
       </section>
     </main>
