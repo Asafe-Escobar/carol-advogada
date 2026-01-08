@@ -192,7 +192,7 @@ const Index = () => {
             </div>
             
             <p className="text-[13px] text-[#E6B324] font-bold leading-[1.4] md:text-[18px]" style={{ textShadow: '0 3px 15px rgba(0, 0, 0, 0.9), 0 0 25px rgba(230, 179, 36, 0.4)' }}>
-              Dr. Carolina - Advogada • 10 anos de experiência
+              Dra. Carolina - Advogada • 10 anos de experiência
             </p>
             <p className="mt-2 text-[11px] text-white/95 font-medium leading-[1.4] md:text-[16px] md:mt-3" style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.8)' }}>
               Professora, Palestrante e Conselheira Estadual da OAB/PI
