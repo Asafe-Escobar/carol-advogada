@@ -1,5 +1,5 @@
 import heroBackground from "@/assets/hero-background.jpg";
-import mobileBackground from "@/assets/mobile 1223.jpg";
+import mobileBackground from "@/assets/mobile 1223.jpeg";
 import logo from "@/assets/logo.png";
 import { Calendar, Clock, Users, Lock, Shield, MapPin, MessageCircle, ShieldCheck, Scale, BookOpen, FileText, ScrollText } from "lucide-react";
 
@@ -79,7 +79,7 @@ const Index = () => {
       {/* Content */}
       <div className="relative z-10 flex min-h-screen flex-col">
         {/* Header */}
-        <header className="px-5 pt-6 md:px-24 md:pt-20">
+        <header className="px-5 pt-6 md:px-24 md:pt-20 flex justify-center">
           <div className="opacity-0 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             <div className="inline-block">
               <img 
@@ -124,9 +124,8 @@ const Index = () => {
                   textShadow: '0 3px 15px rgba(0, 0, 0, 0.8)'
                 }}
               >
-                Quem convive sabe: não é preguiça, não é falta de limite. É cansaço diário,
-                preocupação constante e medo do amanhã.{" "}
-                <span className="text-[#E6B324] font-bold drop-shadow-[0_2px_10px_rgba(230,179,36,0.6)]">Descubra como o BPC/LOAS pode ajudar a sua família.</span>
+                Quem convive sabe: não é preguiça, não é falta de limite. É cansaço diário, preocupação constante e medo do amanhã. Muitas famílias cuidam sozinhas, sem saber que existe um direito que pode ajudar.{" "}
+                <span className="text-[#E6B324] font-bold drop-shadow-[0_2px_10px_rgba(230,179,36,0.6)]">Vou explicar de forma clara e prática como o BPC/LOAS funciona e quando ele pode apoiar a sua família.</span>
               </p>
 
               {/* Decorative divider */}
