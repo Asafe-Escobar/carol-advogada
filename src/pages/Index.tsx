@@ -9,7 +9,7 @@ const InfoChip = ({ icon, text }: { icon: React.ReactNode; text: string }) => (
   </div>
 );
 
-const whatsappLink = "https://wa.me/5586999060648";
+const whatsappLink = "https://chat.whatsapp.com/IjHaE5Sedsc5HXGesLZWti";
 
 const Index = () => {
   return (
