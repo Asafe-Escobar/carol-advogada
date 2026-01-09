@@ -19,8 +19,8 @@ type InfoChipProps = {
 
 const InfoChip = ({ icon, text }: InfoChipProps) => {
   return (
-    <div className="flex items-center gap-2 rounded-full border border-border/60 bg-card/25 px-4 py-2.5 backdrop-blur-md">
-      <span className="text-primary">{icon}</span>
+    <div className="flex items-center gap-2 rounded-full border border-[#E6B324]/30 bg-[#1a1311]/40 px-4 py-2.5 backdrop-blur-md">
+      <span className="text-[#E6B324]">{icon}</span>
       <span className="text-sm font-medium text-foreground/95">{text}</span>
     </div>
   );
@@ -36,56 +36,55 @@ const Index = () => {
         style={{ backgroundImage: `url(${carolinaBg})` }}
       >
         {/* Overlays para contraste e legibilidade (IHC) */}
-        <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-background/95 via-background/80 to-background/15" />
-        <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(1200px_520px_at_18%_22%,hsl(var(--primary)/0.18),transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-background/96 via-background/85 to-background/30 lg:via-background/85 lg:to-background/30" />
+        <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-background/40 via-transparent to-transparent lg:bg-[radial-gradient(1200px_520px_at_18%_22%,hsl(var(--primary)/0.18),transparent_60%)]" />
 
         {/* Foto em PNG por cima do background (sem criar segunda dobra) */}
-        <div className="pointer-events-none absolute bottom-0 right-0 z-20 hidden h-full w-1/2 items-end justify-end lg:flex">
+        <div className="pointer-events-none absolute inset-0 right-[-80px] z-20 hidden h-full w-[50%] items-end justify-end lg:flex">
           <img
             src={carolinaPhoto}
             alt="Foto da advogada Carolina Bezerra"
-            className="h-auto max-h-[92vh] w-auto object-contain drop-shadow-[0_18px_60px_hsl(var(--foreground)/0.28)]"
+            className="h-full w-full max-w-none object-contain object-bottom drop-shadow-[0_30px_90px_hsl(var(--foreground)/0.45)]"
             loading="eager"
           />
         </div>
-        <div className="pointer-events-none absolute bottom-0 right-[-40px] z-20 lg:hidden">
+        <div className="pointer-events-none absolute bottom-0 right-0 z-20 flex h-full w-full items-end justify-end lg:hidden">
           <img
             src={carolinaPhoto}
             alt="Foto da advogada Carolina Bezerra"
-            className="h-auto max-h-[46vh] w-auto object-contain opacity-40 drop-shadow-[0_18px_60px_hsl(var(--foreground)/0.22)]"
+            className="h-[90vh] w-auto object-contain object-bottom opacity-80 drop-shadow-[0_30px_80px_hsl(var(--foreground)/0.4)]"
             loading="lazy"
           />
         </div>
-        <div className="relative z-20 mx-auto flex min-h-screen max-w-6xl items-center px-6 py-14 md:px-12">
-          <div className="w-full max-w-2xl">
+        <div className="relative z-20 flex min-h-screen items-center px-6 py-8 sm:px-8 md:px-10 lg:px-12 xl:px-14">
+          <div className="w-full max-w-[900px]">
             {/* Logo */}
-            <div className="mb-8">
+            <div className="mb-5 md:mb-6">
               <img
                 src={carolinaLogo}
                 alt="Carolina Bezerra Advocacia"
-                className="h-20 w-auto max-w-[420px] md:h-24 lg:h-28"
+                className="h-16 w-auto sm:h-20 md:h-24 lg:h-28"
               />
             </div>
 
-            <header className="mb-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">
+            <header className="mb-4 sm:mb-5">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#E6B324] sm:text-xs">
                 Palestra online e gratuita
               </p>
             </header>
 
-            <h1 className="font-display text-4xl leading-[1.05] text-foreground md:text-5xl lg:text-6xl">
-              Para quem vive o <span className="text-primary">TDAH</span> ou o{" "}
-              <span className="text-primary">autismo</span> dentro de casa
+            <h1 className="font-display text-3xl font-bold leading-[1.15] text-foreground sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+              Para quem vive o <span className="text-[#E6B324]">TDAH</span> ou o{" "}
+              <span className="text-[#E6B324]">autismo</span> dentro de casa
             </h1>
 
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-foreground/85 md:text-lg">
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-foreground/90 sm:text-base md:text-lg lg:text-xl sm:mt-5">
               Quem convive sabe: não é preguiça, não é falta de limite. É cansaço diário,
-              preocupação constante e medo do amanhã. Nesta palestra, você vai entender de forma
-              simples quando o <span className="text-primary font-semibold">BPC/LOAS</span> pode
-              ajudar sua família.
+              preocupação constante e medo do amanhã.{" "}
+              <span className="text-[#E6B324] font-bold">Descubra como o BPC/LOAS pode ajudar a sua família.</span>
             </p>
 
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-4 flex flex-wrap gap-2 sm:gap-2.5 sm:mt-5">
               <InfoChip
                 icon={<Calendar className="h-5 w-5" aria-hidden="true" />}
                 text="14 de janeiro de 2026"
@@ -112,28 +111,28 @@ const Index = () => {
               />
             </div>
 
-            <div className="mt-8">
+            <div className="mt-5 sm:mt-6">
               <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-3 rounded-lg bg-accent px-6 py-4 text-sm font-semibold uppercase tracking-wide text-accent-foreground shadow-[0_18px_50px_hsl(var(--foreground)/0.22)] transition hover:brightness-110 md:w-auto"
+                className="inline-flex w-full items-center justify-center gap-2.5 rounded-lg bg-[#25D366] px-5 py-3.5 text-xs font-bold uppercase tracking-wide text-white shadow-[0_20px_60px_rgba(37,211,102,0.3)] transition hover:bg-[#20BD5A] sm:gap-3 sm:px-6 sm:py-4 sm:text-sm md:w-auto"
                 aria-label="Entrar no grupo do WhatsApp para receber o link da palestra"
               >
                 <MessageCircle className="h-5 w-5" aria-hidden="true" />
-                Entrar no grupo e receber o link
+                Quero participar da palestra
               </a>
-              <p className="mt-4 max-w-md text-sm text-muted-foreground">
-                Você não paga nada. O link de acesso à palestra será enviado no grupo.
+              <p className="mt-3 max-w-md text-xs text-muted-foreground sm:text-sm">
+                Clique e entre no grupo exclusivo. É lá que você receberá o link de acesso à palestra.
               </p>
             </div>
 
-            <footer className="mt-10 border-t border-border/50 pt-6">
-              <p className="text-sm text-foreground/90">
+            <footer className="mt-5 border-t border-border/50 pt-4 sm:mt-6 sm:pt-5">
+              <p className="text-xs text-foreground/90 sm:text-sm">
                 <span className="font-semibold">Carolina de Carvalho Bezerra</span> • 10 anos de
                 advocacia • Professora, Palestrante e Conselheira Estadual da OAB/PI
               </p>
-              <p className="mt-2 text-sm text-muted-foreground">
+              <p className="mt-2 text-xs text-muted-foreground sm:text-sm">
                 Escritórios físicos em Teresina, Acauã e Betânia do Piauí • WhatsApp:
                 <span className="font-medium text-foreground/90"> (86) 99806-0648</span>
               </p>
