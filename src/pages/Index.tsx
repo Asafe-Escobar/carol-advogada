@@ -11,6 +11,16 @@ const InfoChip = ({ icon, text }: { icon: React.ReactNode; text: string }) => (
 
 const whatsappLink = "https://chat.whatsapp.com/IjHaE5Sedsc5HXGesLZWti";
 
+// Função para rastrear cliques no botão do WhatsApp
+const handleWhatsAppClick = () => {
+  if (typeof window !== 'undefined' && (window as any).fbq) {
+    (window as any).fbq('track', 'Lead', {
+      content_name: 'Grupo WhatsApp VIP',
+      content_category: 'WhatsApp Group'
+    });
+  }
+};
+
 const Index = () => {
   return (
     <main className="relative min-h-screen w-full overflow-hidden">
@@ -168,6 +178,7 @@ const Index = () => {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleWhatsAppClick}
               className="group relative inline-flex w-full items-center justify-center gap-2.5 rounded-lg bg-gradient-to-b from-[#25D366] to-[#22C55E] px-4 py-3.5 text-[14px] font-extrabold uppercase tracking-wide text-white shadow-[0_10px_30px_rgba(37,211,102,0.5),inset_0_1px_0_rgba(255,255,255,0.25)] transition-all hover:from-[#22C55E] hover:to-[#20B559] hover:shadow-[0_14px_40px_rgba(37,211,102,0.6)] hover:scale-[1.03] active:scale-[0.98] duration-300 md:text-[18px] md:py-4.5 md:px-7 md:max-w-xl"
               aria-label="Entrar no grupo do WhatsApp"
             >
