@@ -130,6 +130,19 @@ const Index = () => {
                 <span className="text-[#E6B324] drop-shadow-[0_0_20px_rgba(230,179,36,0.8)]">Autismo</span>
               </h1>
 
+              {/* Alert for non-lawyers */}
+              <div 
+                className="opacity-0 animate-fade-in"
+                style={{ animationDelay: "0.4s" }}
+              >
+                <div className="inline-flex items-center gap-2 rounded-lg border-2 border-red-500/80 bg-gradient-to-br from-red-950/90 via-red-900/80 to-red-950/90 backdrop-blur-xl px-4 py-3 shadow-[0_8px_24px_rgba(239,68,68,0.5),0_0_0_1px_rgba(239,68,68,0.3)_inset] md:px-6 md:py-4">
+                  <ShieldCheck className="w-5 h-5 text-red-400 flex-shrink-0 md:w-6 md:h-6" />
+                  <p className="text-[11px] text-white/95 font-semibold leading-tight md:text-[15px]" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.9)' }}>
+                    <span className="text-red-300 font-bold">ATENÇÃO:</span> Esta palestra é direcionada para <span className="text-red-200 font-bold">famílias e cuidadores</span>, não para advogados ou profissionais da área jurídica.
+                  </p>
+                </div>
+              </div>
+
               <p 
                 className="text-[13px] leading-[1.4] text-white/95 opacity-0 animate-fade-in md:text-[20px] md:leading-[1.65]"
                 style={{ 
